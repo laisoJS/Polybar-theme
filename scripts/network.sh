@@ -8,6 +8,7 @@ fi
 
 wifi=$(nmcli con show --active | grep -v 'lo ' | awk '{print $3}' | tail -n +2)
 vpn=$(nmcli con show --active | grep -v -e 'lo' -e 'tun0' | sed -n '2p' | awk '{print $3}')
+eth=$(nmcli --fields TYPE con show --active | grep -v 'lo' | awk 'NR==2 {print $1}')
 
 # Check if the output is equal to the expected string
 if [ "$connection" = "True" ]; then
@@ -15,6 +16,8 @@ if [ "$connection" = "True" ]; then
         type="󰖩"
     elif [ "$vpn" = "vpn" ]; then
         type=""
+    elif [ "$eth" = "ethernet" ]; then
+        type="󰈀"
     else
         type="unknow"
     fi
