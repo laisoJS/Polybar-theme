@@ -20,7 +20,7 @@ if [ -d "$_polybar" ]; then
 fi
 
 # Clone the repository into the Polybar config folder
-if git clone https://github.com/laisoJS/Polybar-theme.git "$_polybar"; then
+if git clone https://github.com/laisoJS/Polybar-theme.git -b themes "$_polybar"; then
     echo "Setup completed successfully!"
 else
     echo "An unexpected error occurred."
