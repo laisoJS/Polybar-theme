@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$(curl -Is  https://www.google.com | head -n 1 | awk '{print $2}')" = "200" ]; then
+if ping -c 1 -W 1 8.8.8.8 &> /dev/null; then
     connection="True"
 else
     type=""
