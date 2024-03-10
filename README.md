@@ -12,15 +12,8 @@ Polybar is a lightweight status bar that allows for extensive customization and 
 Ensure you have the following packages installed:
 
 ```bash
-sudo pacman -S polybar playerctl pavucontrol
+sudo pacman -S polybar playerctl pavucontrol ttf-font-awesome ttf-0xproto-nerd
 ```
-
-Additionally, this theme relies on the following fonts:
-```
-ttf-font-awesome
-ttf-0xproto-nerd
-```
-You can install them using your package manager.
 
 ### Usage
 
